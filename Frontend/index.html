@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Material Portal</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <section id="header">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTe270b0JUnjAGk8vRmXvhzBovK1RepRUE6BQ&s" alt="KSIT Logo">
+    <div class="header-text">
+        <h1>K S INSTITUTE OF TECHNOLOGY</h1>
+        <p>No.14, Raghuvanahalli, Kanakapura Road, Bengaluru - 560109</p>
+        <p>9900710055 | Affiliated to VTU, Belagavi & Approved by AICTE, New Delhi</p>
+        <p>Accredited by NBA, NAAC & IEI</p>
+    </div>
+</section>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <h1>📚 Study Material Portal</h1>
+            <nav>
+                <ul class="menu">
+                    <li><a href="#upload-section">Upload</a></li>
+                    <li><a href="#materials-section">Materials</a></li>
+                    <li><a href="#chat-section">Chat</a></li>
+                    <li><a id="datetime-display" class="datetime-btn"></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+</br>
+    <section id="slideshow-container">
+        <div class="slides fade">
+            <img src="https://ksgi.edu.in/img/courses/cse_big.webp" alt="CSE">
+        </div>
+        <div class="slides fade">
+            <img src="https://ksgi.edu.in/img/courses/ec.webp" alt="EC">
+        </div>
+        <div class="slides fade">
+            <img src="image.png" alt="Image 3">
+        </div>
+        <div class="slides fade">
+            <img src="21fb84dc-728d-443f-8700-65af28a02a62.jpg" alt="Image 4">
+        </div>
+    </section>
+</br>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Upload Section -->
+        <section id="upload-section" class="upload-section">
+            <h2 class="section-heading">Upload Study Material</h2>
+            <form id="uploadForm">
+                <label for="branch">Branch:</label>
+                <select id="branch" name="branch" required>
+                    <option value="" disabled selected>Select Branch</option>
+                    <option value="CSD">CSD</option>
+                    <option value="IoT">IOT</option>
+                    <option value="CCE">CCE</option>
+                    <option value="AIML">AI/ML</option>
+                    <option value="CSE">CSE</option>
+                </select>
+
+                <label for="semester">Semester:</label>
+                <select id="semester" name="semester" required>
+                    <option value="" disabled selected>Select Semester</option>
+                    <option value="1">1st Semester</option>
+                    <option value="2">2nd Semester</option>
+                    <option value="3">3rd Semester</option>
+                </select>
+
+                <label for="file">File:</label>
+                <input type="file" id="file" name="file" required>
+
+                <button type="submit">Upload</button>
+            </form>
+        </section>
+
+        <!-- Materials Section -->
+        <section id="materials-section" class="materials-section">
+            <h2 class="section-heading"><center>Branch Materials</center></h2>
+        </br>
+            <div id="branchMaterials">
+                <!-- Branches -->
+                <div class="branch-box" id="CSD">
+                    <h3>CSD</h3>
+                    <button class="view-btn" onclick="toggleMaterials('CSD')">View</button>
+                    <div class="materials" style="display: none;"></div>
+                </div>
+                <div class="branch-box" id="IoT">
+                    <h3>IOT</h3>
+                    <button class="view-btn" onclick="toggleMaterials('IoT')">View</button>
+                    <div class="materials" style="display: none;"></div>
+                </div>
+                <div class="branch-box" id="CCE">
+                    <h3>CCE</h3>
+                    <button class="view-btn" onclick="toggleMaterials('CCE')">View</button>
+                    <div class="materials" style="display: none;"></div>
+                </div>
+                <div class="branch-box" id="AIML">
+                    <h3>AI/ML</h3>
+                    <button class="view-btn" onclick="toggleMaterials('AIML')">View</button>
+                    <div class="materials" style="display: none;"></div>
+                </div>
+                <div class="branch-box" id="CSE">
+                    <h3>CSE</h3>
+                    <button class="view-btn" onclick="toggleMaterials('CSE')">View</button>
+                    <div class="materials" style="display: none;"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chat Section -->
+        <section id="chat-section" class="chat-section">
+            <h2 class="section-heading">Chat with Us</h2>
+            <div class="chat-container">
+                <div id="chatWindow" class="chat-window"></div>
+                <form id="chatForm">
+                    <input type="text" id="chatInput" placeholder="Type your message..." required>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </section>
+    </div>
+    <div id="yoyo">
+    <p><center>&copy; MADE BY JAGANNATH NAYAK</center><p>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

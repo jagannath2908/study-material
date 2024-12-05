@@ -71,7 +71,7 @@ document.getElementById('loginForm').addEventListener('submit', async (e) => {
     }
     
     try {
-        const response = await fetch('https://study-portal-backend.onrender.com/api/register', {
+        const response = await fetch('https://study-material-donw.onrender.com/api/register', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

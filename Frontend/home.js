@@ -1,6 +1,6 @@
 // Global variables
 // const API_URL = 'http://localhost:5000/api';
-const API_URL = 'https://study-portal-backend.onrender.com/api';
+const API_URL = 'https://study-material-donw.onrender.com/api';
 let branchDataLoaded = {};
 
 // Check authentication

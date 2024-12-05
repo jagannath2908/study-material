@@ -11,9 +11,14 @@ const User = require('./models/User');
 const auth = require('./models/auth');
 const connectDB = require('./config/db');
 const app = express();
-
-// Middleware
 app.use(cors());
+// Middleware
+// app.use(cors({
+//    // origin: ['http://localhost:5000', 'https://study-portal-backend.onrender.com'],
+//     credentials: true,
+//     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+//     allowedHeaders: ['Content-Type', 'Authorization']
+// }));
 app.use(express.json());
 app.use('/uploads', express.static('uploads'));
 

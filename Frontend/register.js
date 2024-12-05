@@ -71,7 +71,7 @@ document.getElementById('loginForm').addEventListener('submit', async (e) => {
     }
     
     try {
-        const response = await fetch('http://localhost:5000/api/register', {
+        const response = await fetch('https://study-portal-backend.onrender.com/api/register', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -90,7 +90,7 @@ document.getElementById('loginForm').addEventListener('submit', async (e) => {
         if (response.ok) {
             // Store auth data using AuthService
             AuthService.setAuth(data.token, data.user);
-            window.location.href = 'index.html';
+            window.location.href = 'home.html';
         } else {
             alert(data.message || 'Registration failed');
         }

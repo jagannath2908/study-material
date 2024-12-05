@@ -7,7 +7,7 @@ let branchDataLoaded = {};
 const token = localStorage.getItem('token');
 console.log(token);
 if (!token) {
-    window.location.href = 'login.html';
+    window.location.href = 'index.html';
 }
 
 // Add logout handler
@@ -15,7 +15,7 @@ document.getElementById('logout-btn').addEventListener('click', (e) => {
     e.preventDefault();
     localStorage.removeItem('token');
     localStorage.removeItem('user');
-    window.location.href = 'login.html';
+    window.location.href = 'index.html';
 });
 
 // File upload handling with validation
@@ -56,7 +56,7 @@ document.getElementById("uploadForm").addEventListener("submit", async function 
 
     const token = localStorage.getItem('token');
     if (!token) {
-        window.location.href = 'login.html';
+        window.location.href = 'index.html';
         return;
     }
 

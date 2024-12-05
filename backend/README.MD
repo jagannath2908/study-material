@@ -218,3 +218,18 @@ npm run dev
 ```
 
 The server will start on port 5000 by default. You can change this by setting the PORT environment variable.
+
+
+
+
+
+```
+{
+  "name": "Rushikesh Bhomale",
+  "email": "rushikesh@gmail.com",
+  "password": "9518933542",
+  "department": "CSD",
+  "role": "student"
+}
+```
+

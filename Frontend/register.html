@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     .login-container{
+        border: 2px solid black;
+        border-radius: 10px;
+        height: 400px;
+        background-color: rgb(39, 5, 102);
+        color: aliceblue;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-left: 600px;
+        margin-right:600px ;
+        margin-top: 80px;
+        transition: background-color 1s ease-in , color 1s ease-in;
+
+     }
+     h2{
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 500px;
+    font-size: 30px;
+
+     }
+     .login-container:hover{
+    background-color: rgb(11, 192, 238);
+    color:black;
+}
+body{
+    background-image: url(https://mail.ksgi.edu.in/img/blog/ksit_widget1.webp);
+    background-repeat: repeat-x;
+    background-size: cover;
+    
+}
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Register Now</h2>
+        <form id="loginForm">
+            <input type="name" id="neme" placeholder="Name" required><br><br>
+            <input type="email" id="email" placeholder="Email" required><br><br>
+            <input type="password" id="password" placeholder="Password" required><br><br>
+            <input type="department" id="department" placeholder="department" required><br><br>
+            <input type="role" id="role" placeholder="role" required><br><br>
+
+            <button type="submit">Register</button>
+        </form>
+       
+    </div>
+    <script src="register.js"></script>
+</body>
+</html>

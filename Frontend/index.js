@@ -2,6 +2,21 @@
 const API_URL = 'http://localhost:5000/api';
 let branchDataLoaded = {};
 
+// Check authentication
+const token = localStorage.getItem('token');
+console.log(token);
+if (!token) {
+    window.location.href = 'login.html';
+}
+
+// Add logout handler
+document.getElementById('logout-btn').addEventListener('click', (e) => {
+    e.preventDefault();
+    localStorage.removeItem('token');
+    localStorage.removeItem('user');
+    window.location.href = 'login.html';
+});
+
 // File upload handling with validation
 function validateFile(file) {
     const maxSize = 5 * 1024 * 1024; // 5MB
@@ -38,10 +53,19 @@ document.getElementById("uploadForm").addEventListener("submit", async function 
     formData.append('semester', semester);
     formData.append('file', fileInput.files[0]);
 
+    const token = localStorage.getItem('token');
+    if (!token) {
+        window.location.href = 'login.html';
+        return;
+    }
+
     try {
         showLoader();
         const response = await fetch(`${API_URL}/materials`, {
             method: 'POST',
+            headers: {
+                'Authorization': `Bearer ${token}`
+            },
             body: formData
         });
 
@@ -65,7 +89,12 @@ document.getElementById("uploadForm").addEventListener("submit", async function 
 // Load materials for a branch
 async function loadMaterialsForBranch(branch) {
     try {
-        const response = await fetch(`${API_URL}/materials/${branch}`);
+        const token = localStorage.getItem('token');
+        const response = await fetch(`${API_URL}/materials/${branch}`, {
+            headers: {
+                'Authorization': `Bearer ${token}`
+            }
+        });
         const materials = await response.json();
         
         const branchMaterials = document.getElementById(branch).querySelector(".materials");
@@ -104,6 +133,7 @@ function createMaterialCard(material) {
     if (['mp4', 'avi', 'mov'].includes(fileExtension)) fileIcon = '🎥';
     if (['mp3', 'wav'].includes(fileExtension)) fileIcon = '🎵';
 
+    const token = localStorage.getItem('token');
     card.innerHTML = `
         <div class="material-info">
             <span class="file-icon">${fileIcon}</span>
@@ -113,14 +143,36 @@ function createMaterialCard(material) {
             </div>
         </div>
         <div class="material-actions">
-            <a href="${API_URL}/download/${material.branch}/${material.fileName}" 
+            <a href="${API_URL}/download/${material.branch}/${material.fileName}?token=${token}" 
                class="download-btn" 
+               onclick="downloadFile(event, this.href)"
                download="${material.originalName}">
                Download
             </a>
         </div>
     `;
     return card;
+}
+
+// Download file with error handling
+async function downloadFile(e, url) {
+    e.preventDefault();
+    try {
+        const response = await fetch(url);
+        if (!response.ok) throw new Error('Download failed');
+        const blob = await response.blob();
+        const downloadUrl = window.URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = downloadUrl;
+        a.download = e.target.getAttribute('download');
+        document.body.appendChild(a);
+        a.click();
+        window.URL.revokeObjectURL(downloadUrl);
+        document.body.removeChild(a);
+    } catch (error) {
+        console.error('Download error:', error);
+        showNotification('Error downloading file', 'error');
+    }
 }
 
 // Load materials for all branches on page load
@@ -255,4 +307,3 @@ function toggleMaterials(branch) {
         viewBtn.textContent = 'View';
     }
 }
-

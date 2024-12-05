@@ -507,7 +507,7 @@ slides {
 
 .view-btn {
     position: absolute;
-    right: 15px;
+    right: 1px;
     top: 15px;
     background: #4CAF50;
     color: white;
@@ -517,6 +517,9 @@ slides {
     cursor: pointer;
     font-weight: bold;
     transition: background-color 0.3s ease;
+    z-index: 9999;
+    border: 1PX SOLID rgb(9, 8, 8);
+    border-radius: 100px;
 }
 
 .view-btn:hover {

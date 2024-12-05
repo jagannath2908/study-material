@@ -203,5 +203,102 @@
     "filePath": "/uploads/CSD/1732691555389-909459355-1732463976757-268090932-Create a webpage containaing (2) (1).docx",
     "fileType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
     "uploadDate": "2024-11-27T07:12:35.408Z"
+  },
+  {
+    "branch": "CSD",
+    "semester": "1",
+    "fileName": "1733242622249-425203718-1732463976757-268090932-Create a webpage containaing (2) (3).docx",
+    "originalName": "1732463976757-268090932-Create a webpage containaing (2) (3).docx",
+    "filePath": "/uploads/CSD/1733242622249-425203718-1732463976757-268090932-Create a webpage containaing (2) (3).docx",
+    "fileType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "uploadDate": "2024-12-03T16:17:02.259Z"
+  },
+  {
+    "branch": "IoT",
+    "semester": "1",
+    "fileName": "1733242659938-308583911-1732466535045-990592563-home.css",
+    "originalName": "1732466535045-990592563-home.css",
+    "filePath": "/uploads/IoT/1733242659938-308583911-1732466535045-990592563-home.css",
+    "fileType": "text/css",
+    "uploadDate": "2024-12-03T16:17:39.949Z"
+  },
+  {
+    "branch": "CSD",
+    "semester": "1",
+    "fileName": "1733242751582-53688446-1732463976757-268090932-Create a webpage containaing (2) (3).docx",
+    "originalName": "1732463976757-268090932-Create a webpage containaing (2) (3).docx",
+    "filePath": "/uploads/CSD/1733242751582-53688446-1732463976757-268090932-Create a webpage containaing (2) (3).docx",
+    "fileType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "uploadDate": "2024-12-03T16:19:11.593Z"
+  },
+  {
+    "branch": "IoT",
+    "semester": "2",
+    "fileName": "1733246288908-352258294-Exploring Chintamani (1).pptx",
+    "originalName": "Exploring Chintamani (1).pptx",
+    "filePath": "/uploads/IoT/1733246288908-352258294-Exploring Chintamani (1).pptx",
+    "fileType": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+    "uploadedBy": {
+      "userId": "674f3bd350e373358878ee20",
+      "name": "Rushikesh Bhomale",
+      "role": "student"
+    },
+    "uploadDate": "2024-12-03T17:18:08.936Z"
+  },
+  {
+    "branch": "AIML",
+    "semester": "1",
+    "fileName": "1733247344748-999795821-Exploring Chintamani.pptx",
+    "originalName": "Exploring Chintamani.pptx",
+    "filePath": "/uploads/AIML/1733247344748-999795821-Exploring Chintamani.pptx",
+    "fileType": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+    "uploadedBy": {
+      "userId": "674f3bd350e373358878ee20",
+      "name": "Rushikesh Bhomale",
+      "role": "student"
+    },
+    "uploadDate": "2024-12-03T17:35:44.767Z"
+  },
+  {
+    "branch": "CCE",
+    "semester": "3",
+    "fileName": "1733290550562-938021399-1732678576059-568453553-1732464064736-240095483-Create a webpage containaing (2).docx",
+    "originalName": "1732678576059-568453553-1732464064736-240095483-Create a webpage containaing (2).docx",
+    "filePath": "/uploads/CCE/1733290550562-938021399-1732678576059-568453553-1732464064736-240095483-Create a webpage containaing (2).docx",
+    "fileType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "uploadedBy": {
+      "userId": "674f4debef3ba15bb91a6a70",
+      "name": "jaggu",
+      "role": "student"
+    },
+    "uploadDate": "2024-12-04T05:35:50.573Z"
+  },
+  {
+    "branch": "CCE",
+    "semester": "1",
+    "fileName": "1733290722563-254489809-1732678576059-568453553-1732464064736-240095483-Create a webpage containaing (2).docx",
+    "originalName": "1732678576059-568453553-1732464064736-240095483-Create a webpage containaing (2).docx",
+    "filePath": "/uploads/CCE/1733290722563-254489809-1732678576059-568453553-1732464064736-240095483-Create a webpage containaing (2).docx",
+    "fileType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "uploadedBy": {
+      "userId": "674f4debef3ba15bb91a6a70",
+      "name": "jaggu",
+      "role": "student"
+    },
+    "uploadDate": "2024-12-04T05:38:42.572Z"
+  },
+  {
+    "branch": "CCE",
+    "semester": "2",
+    "fileName": "1733300220475-763801378-Create a webpage containaing (2) (1).docx",
+    "originalName": "Create a webpage containaing (2) (1).docx",
+    "filePath": "/uploads/CCE/1733300220475-763801378-Create a webpage containaing (2) (1).docx",
+    "fileType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "uploadedBy": {
+      "userId": "67500fedbb1a23c3854b7ad1",
+      "name": "abdul",
+      "role": "student"
+    },
+    "uploadDate": "2024-12-04T08:17:00.482Z"
   }
 ]
